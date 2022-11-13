@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style_register.css') }}">
+  <title>Diabetic Retinopathy</title>
+</head>
+
+<body>
+  <section="navbar">
+
+
+    <ul>
+      <li><a href="#home">DR Register</a></li>
+      <!-- <li style="float:right"><a class="active" href="{{ url_for('result') }}">Prediction</a></li> -->
+      <li style="float:right"><a class="active" href="{{ url_for('login') }}">Login</a></li>
+      <li style="float:right"><a class="active" href="{{ url_for('register') }}">Register</a></li>
+      <!-- <li style="float:right"><a class="active" href="{{ url_for('index') }}">Home</a></li> -->
+    </ul>
+    </section>
+
+
+    
+      
+        
+        <form action="{{ url_for('afterreg') }}" method="POST">
+          <section class="login-struct">
+          <div class="login">
+              <img src="https://cdn4.iconfinder.com/data/icons/summer-and-holidays-4-1/128/163-256.png">
+            <input class=" input col-form-control-sm" type="text" name="name" placeholder="Enter name">
+            <input class=" input-one col-form-control-sm" type="email" name="email" placeholder="Enter email">
+            <input class=" input-one col-form-control-sm" type="password" name="password" placeholder="Enter password">
+            <input class="button btn btn-dark btn-md btn-block" type="submit" value="Register"><br>
+            <a class="page" href="#">{{pred}}</a><br>
+            <h6>Already have an account ? <a href="{{ url_for('login') }}">Login</a></h6>
+          </div>
+        </section>
+        </form>
+        
+
+
+</body>
+
+</html>
